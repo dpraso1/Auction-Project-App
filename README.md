@@ -13,6 +13,7 @@ This is an eBay-like Auction Web Application that will allow users to create an 
 - Lamija Vrnjak 
 
 ## Technologies
+
 **Front-end Technologies**
 
 - ReactJS
@@ -20,3 +21,7 @@ This is an eBay-like Auction Web Application that will allow users to create an 
 **Back-end Technologies**
 
 - NodeJS
+
+**Database**
+
+- MySQL
