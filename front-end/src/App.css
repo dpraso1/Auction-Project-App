@@ -2,6 +2,37 @@
   background-color: #252525;
   height: 40px;
 }
+.inactive .icon1 {
+  color: #778899;
+}
+
+.inactive .icon1:hover {
+  color: #586674
+}
+
+.inactive .icon2 {
+  color: #778899;
+}
+
+.inactive .icon2:hover {
+  color: #586674
+}
+
+.inactive .icon3 {
+  color: #778899;
+}
+
+.inactive .icon3:hover {
+  color: #586674
+}
+
+.inactive .icon4 {
+  color: #778899;
+}
+
+.inactive .icon4:hover {
+  color: #586674
+}
 
 .product-cover {
   background: #FAFAFA;

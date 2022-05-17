@@ -13,11 +13,12 @@ function App() {
       <header>
         <div className="icons">
       <Navbar className="inactive">
+
     
-            <Nav.Link href="https://www.facebook.com/"><FacebookRoundedIcon /></Nav.Link>
-            <Nav.Link href="https://www.instagram.com/"><InstagramIcon /></Nav.Link>
-            <Nav.Link href="https://twitter.com/?lang=en"><TwitterIcon /></Nav.Link>
-            <Nav.Link href="https://www.google.com/"><GoogleIcon /></Nav.Link>
+            <Nav.Link className="icon1" href="https://www.facebook.com/"><FacebookRoundedIcon /></Nav.Link>
+            <Nav.Link className="icon2" href="https://www.instagram.com/"><InstagramIcon /></Nav.Link>
+            <Nav.Link className="icon3" href="https://twitter.com/?lang=en"><TwitterIcon /></Nav.Link>
+            <Nav.Link className="icon4" href="https://www.google.com/"><GoogleIcon /></Nav.Link>
         
       </Navbar>
       </div>
