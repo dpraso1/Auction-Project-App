@@ -20,8 +20,12 @@ module.exports = (sequelize, DataTypes) => {
             type: Sequelize.DOUBLE,
             allowNull: false,
         },
-        time_left: {
-            type: Sequelize.STRING,
+        start_date: {
+            type: Sequelize.DATE,
+            allowNull: false,
+        },
+        end_date: {
+            type: Sequelize.DATE,
             allowNull: false,
         },
         sold: {

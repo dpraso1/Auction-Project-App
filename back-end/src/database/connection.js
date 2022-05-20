@@ -1,3 +1,4 @@
+const { append } = require('express/lib/response');
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize("auction", 'root', '', { 
@@ -33,7 +34,5 @@ bid.sync();
 image.sync();
 category.sync();
 subcategory.sync();
-
-
 
 module.exports = sequelize;
