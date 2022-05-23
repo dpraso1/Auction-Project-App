@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define("user", {
         id: {
-            type: Sequelize.STRING,
+            type: Sequelize.UUID,
             allowNull:false,
             primaryKey: true,
             unique: true
@@ -23,7 +23,22 @@ module.exports = (sequelize, DataTypes) => {
         password: {
             type: Sequelize.STRING,
             allowNull: false,
+        },
+        address_id: {
+            type: Sequelize.UUID,
+            foreignKey: true,
+            allowNull: false,
+            references: {
+               model: 'address',
+               key: 'id',
+               as: 'address_id',
+            }
         }
-    }, {freezeTableName: true});
+    }, {
+        freezeTableName: true,
+        timestamps: false
+       });
+
+       
     return User;
 };

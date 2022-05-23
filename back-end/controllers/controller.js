@@ -1,17 +1,17 @@
 'use strict';
 
-const sequelize = require("../src/database/connection");
+const sequelize = require("../models/connection");
 sequelize.sync();
 const { Sequelize } = require('sequelize');
 
-const user = require('../src/database/user.js')(sequelize, Sequelize);
-const address = require('../src/database/address.js')(sequelize, Sequelize);
-const card_information = require('../src/database/card_information.js')(sequelize, Sequelize);
-const product = require('../src/database/product.js')(sequelize, Sequelize);
-const bid = require('../src/database/bid.js')(sequelize, Sequelize);
-const image = require('../src/database/image.js')(sequelize, Sequelize);
-const category = require('../src/database/category.js')(sequelize, Sequelize);
-const subcategory = require('../src/database/subcategory.js')(sequelize, Sequelize);
+const user = require('../models/user.js')(sequelize, Sequelize);
+const address = require('../models/address.js')(sequelize, Sequelize);
+const card_information = require('../models/card_information.js')(sequelize, Sequelize);
+const product = require('../models/product.js')(sequelize, Sequelize);
+const bid = require('../models/bid.js')(sequelize, Sequelize);
+const image = require('../models/image.js')(sequelize, Sequelize);
+const category = require('../models/category.js')(sequelize, Sequelize);
+const subcategory = require('../models/subcategory.js')(sequelize, Sequelize);
 
 user.sync();
 address.sync();

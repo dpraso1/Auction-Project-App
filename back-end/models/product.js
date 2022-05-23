@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
     const Product = sequelize.define("product", {
         id: {
-            type: Sequelize.STRING,
+            type: Sequelize.UUID,
             allowNull:false,
             primaryKey: true,
             unique: true
@@ -31,7 +31,21 @@ module.exports = (sequelize, DataTypes) => {
         sold: {
             type: Sequelize.STRING,
             allowNull: false,
+        },
+        category_id: {
+            type: Sequelize.UUID,
+            foreignKey: true,
+            allowNull: false,
+            references: {
+               model: 'category',
+               key: 'id',
+               as: 'category_id',
+            }
         }
-    }, {freezeTableName: true});
+    }, {
+        freezeTableName: true,
+        timestamps: false
+       });
+       
     return Product;
 };

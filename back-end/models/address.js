@@ -1,33 +1,37 @@
 const Sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-    const Card = sequelize.define("card_information", {
+    const Address = sequelize.define("address", {
         id: {
-            type: Sequelize.STRING,
+            type: Sequelize.UUID,
             allowNull:false,
             primaryKey: true,
             unique: true
         }, 
-        name_on_card: {
+        street: {
             type: Sequelize.STRING,
             allowNull: false,
         },
-       card_number: {
-            type: Sequelize.INTEGER,
-            allowNull: false,
-        },
-        expiration_date: {
+        city: {
             type: Sequelize.STRING,
             allowNull: false,
         },
-        month: {
+        zip_code: {
             type: Sequelize.STRING,
             allowNull: false,
         },
-        CVC_CW: {
-            type: Sequelize.INTEGER,
+        state: {
+            type: Sequelize.STRING,
+            allowNull: false,
+        },
+        country: {
+            type: Sequelize.STRING,
             allowNull: false,
         }
-    }, {freezeTableName: true});
-    return Card;
+    }, {
+        freezeTableName: true,
+        timestamps: false
+       });
+       
+    return Address;
 };

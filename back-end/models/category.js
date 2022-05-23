@@ -3,15 +3,19 @@ const Sequelize = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
     const Category = sequelize.define("category", {
         id: {
-            type: Sequelize.STRING,
+            type: Sequelize.UUID,
             allowNull:false,
             primaryKey: true,
-            unique: true
-        }, 
+            unique: true,
+        },
         category_name: {
             type: Sequelize.STRING,
             allowNull: false,
         }
-    }, {freezeTableName: true});
+    }, {
+        freezeTableName: true,
+        timestamps: false
+       });
+       
     return Category;
 };
