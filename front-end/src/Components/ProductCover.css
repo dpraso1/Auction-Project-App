@@ -1,0 +1,51 @@
+
+.product-cover {
+    background: #FAFAFA;
+    height: 683px;
+    font-family: "Lato", sans-serif;
+
+  }
+
+  .product-title {
+      font-family: "Lato", sans-serif;
+      color: #252525;
+      letter-spacing: 1.61px;
+      font-size: 46px;
+      position: absolute;
+      left: 480px;
+      top: 253px;
+      width: 317px;
+      height: 55px;
+  }
+
+  .product-price {
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    color: #8367D8;
+    letter-spacing: 0.84px;
+    position: absolute;
+    left: 480px;
+    top: 322px;
+  }
+
+  .product-description {
+    width: 200px;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    color: #252525;
+    letter-spacing: 0.56px;
+    line-height: 22px;
+    position: absolute;
+    left: 480px;
+    top: 356px;
+      
+  }
+  
+  img {
+    max-width: 488px;
+    max-height: 294px; 
+    position: absolute;
+    left: 766px;
+    top: 297px;
+    
+  }
