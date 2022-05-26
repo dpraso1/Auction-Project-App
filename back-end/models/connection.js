@@ -1,4 +1,3 @@
-const { append } = require('express/lib/response');
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize("auction", 'root', '', { 
@@ -8,32 +7,24 @@ const sequelize = new Sequelize("auction", 'root', '', {
 
 sequelize.authenticate().then(()=> {
     console.log('Connection has been established successfully.');
- }).catch(err => {
+}).catch(err => {
     console.log('error:' + err);
- });
+});
 
- const database = {};
+const address = require('../models/address')(sequelize, Sequelize);
+const bid = require('../models/bid')(sequelize, Sequelize);
+const card_information = require('../models/card_information')(sequelize, Sequelize);
+const category = require('../models/category')(sequelize, Sequelize);
+const image = require('../models/image')(sequelize, Sequelize);
+const product = require('../models/product')(sequelize, Sequelize);
+const subcategory = require('../models/subcategory')(sequelize, Sequelize);
+const user = require('../models/user')(sequelize, Sequelize);
 
-database.Sequelize = Sequelize;
-database.sequelize = sequelize;
 
-const user = require('./user.js')(sequelize, Sequelize);
-const address = require('./address.js')(sequelize, Sequelize);
-const card_information = require('./card_information.js')(sequelize, Sequelize);
-const product = require('./product.js')(sequelize, Sequelize);
-const bid = require('./bid.js')(sequelize, Sequelize);
-const image = require('./image.js')(sequelize, Sequelize);
-const category = require('./category.js')(sequelize, Sequelize);
-const subcategory = require('./subcategory.js')(sequelize, Sequelize);
 
-user.sync();
-address.sync();
-card_information.sync();
 product.sync();
-bid.sync();
 image.sync();
-category.sync();
-subcategory.sync();
+
 
 //address-user
 address.hasMany(user, {
@@ -77,33 +68,34 @@ subcategory.belongsTo(category, {
 
 //product-image
 product.hasMany(image, {
-    foreignKey: "category_id",
+    foreignKey: "product_id",
     sourceKey: "id"
  });
 image.belongsTo(product, {
-     foreignKey: "category_id",
+     foreignKey: "product_id",
      sourceKey: "id"
  });
 
+ 
 //product-bid
 product.hasMany(bid, {
-    foreignKey: "category_id",
+    foreignKey: "product_id",
     sourceKey: "id"
  });
 bid.belongsTo(product, {
-     foreignKey: "category_id",
+     foreignKey: "product_id",
      sourceKey: "id"
  });
 
 //user-bid
 user.hasMany(bid, {
-    foreignKey: "category_id",
+    foreignKey: "user_id",
     sourceKey: "id"
  });
 bid.belongsTo(user, {
-     foreignKey: "category_id",
+     foreignKey: "user_id",
      sourceKey: "id"
  });
 
 
-module.exports = sequelize;
+module.exports = {sequelize, address, bid, card_information, category, subcategory, user, product, image};
