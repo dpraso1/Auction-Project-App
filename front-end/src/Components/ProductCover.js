@@ -13,7 +13,6 @@ const ProductCover = () => {
                 setProduct(response.data);
             } catch (err) {
                 if(err.response) {
-                    
                     console.log(err.response.data);
                     console.log(err.response.status);
                     console.log(err.response.headers);
@@ -27,29 +26,23 @@ const ProductCover = () => {
     }, []);
 
     return (
-        <div className="product-cover">
-            <div className="product-title">
-                {product.product_name}
-            </div>
-
-            <div className="product-price">
-            
-            {product.product_price  && <p>Start from - ${product.product_price.toFixed(2)}</p>}
-            </div>
-
-            <div className="product-description">
-               
-            {product.product_description && <p>{product.product_description}</p>}
-                
-                
-            </div>
-
-            <div className="product-image">
-                
-            {product.images && <img src={product.images[0].image_link} alt=""/> }
-            
-            </div>
+    <div className="product-cover">
+        <div className="product-title">
+            {product.product_name}
         </div>
+
+        <div className="product-price">
+            {product.product_price  && <p>Start from - ${product.product_price.toFixed(2)}</p>}
+        </div>
+
+        <div className="product-description">
+            {product.product_description && <p>{product.product_description}</p>}
+        </div>
+
+        <div className="product-image">  
+            {product.images && <img src={product.images[0].image_link} alt=""/> }
+        </div>
+    </div>
     )
 }
 

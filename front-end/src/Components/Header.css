@@ -1,22 +1,22 @@
 .inactive {
-    background-color: #252525;
-    height: 40px;
-  }
+  background-color: #252525;
+  height: 40px;
+}
   
-  .inactive .social-media-icon {
-    color: #778899;
-  }
+.inactive .social-media-icon {
+  color: #778899;
+}
   
-  .inactive .social-media-icon:hover {
-    color: #586674
-  }
+.inactive .social-media-icon:hover {
+  color: #586674
+}
   
- .app-name {
-    font-family: "Lato", sans-serif;
-    font-size: 24px;
-    color: #8367D8;
-    letter-spacing: 0.84px;
-    position: absolute;
-    left: 197px;
-    top: 63px;
- }
+.app-name {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  color: #8367D8;
+  letter-spacing: 0.84px;
+  position: absolute;
+  left: 197px;
+  top: 63px;
+}

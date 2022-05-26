@@ -1,19 +1,17 @@
 .inactive {
-    background-color: #252525;
-    height: 40px;
-  }
+  background-color: #252525;
+  height: 40px;
+}
   
-  .inactive .social-media-icon {
-    color: #778899;
-  }
+.inactive .social-media-icon {
+  color: #778899;
+}
   
-  .inactive .social-media-icon:hover {
-    color: #586674
-  }
+.inactive .social-media-icon:hover {
+  color: #586674
+}
   
-  .product-cover {
-    background: #FAFAFA;
-    height: 683px;
-  }
-  
-  
+.product-cover {
+  background: #FAFAFA;
+  height: 683px;
+}
