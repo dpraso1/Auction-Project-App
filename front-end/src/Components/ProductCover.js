@@ -27,8 +27,10 @@ const ProductCover = () => {
 
     return (
     <div className="product-cover">
-        <div className="product-title">
-            {product.product_name}
+        
+        <div className="details">
+        <div className="product-name">
+            <p>{product.product_name}</p>
         </div>
 
         <div className="product-price">
@@ -38,9 +40,11 @@ const ProductCover = () => {
         <div className="product-description">
             {product.product_description && <p>{product.product_description}</p>}
         </div>
+        </div>
 
+        
         <div className="product-image">  
-            {product.images && <img src={product.images[0].image_link} alt=""/> }
+            {product.images && <img src={product.images[0].image_link} alt="Random product"/> }
         </div>
     </div>
     )

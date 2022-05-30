@@ -1,48 +1,38 @@
 .product-cover {
+  font-family: "Lato", sans-serif;  
   background: #FAFAFA;
-  height: 683px;
-  font-family: "Lato", sans-serif;
+  padding: 200px 200px 50px 500px;
+  display: flex;
+  flex-direction: row;
 }
 
-.product-title {
+.product-cover .product-name {
   font-family: "Lato", sans-serif;
   color: #252525;
   letter-spacing: 1.61px;
   font-size: 46px;
-  position: absolute;
-  left: 480px;
-  top: 253px;
   width: 317px;
   height: 55px;
 }
 
-.product-price {
+.product-cover .product-price {
   font-family: "Lato", sans-serif;
   font-size: 24px;
   color: #8367D8;
   letter-spacing: 0.84px;
-  position: absolute;
-  left: 480px;
-  top: 322px;
+  
 }
 
-.product-description {
-  width: 200px;
+.product-cover .product-description {
   font-family: "Lato", sans-serif;
   font-size: 16px;
   color: #252525;
   letter-spacing: 0.56px;
-  line-height: 22px;
-  position: absolute;
-  left: 480px;
-  top: 356px;
-      
+  line-height: 22px;  
 }
-  
-img {
-  max-width: 488px;
-  max-height: 294px; 
-  position: absolute;
-  left: 766px;
-  top: 297px;  
+
+.product-cover img {
+  width: 350px;
+  height: 350px; 
+  margin:20px;
 }

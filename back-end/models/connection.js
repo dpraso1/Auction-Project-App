@@ -20,11 +20,8 @@ const product = require('../models/product')(sequelize, Sequelize);
 const subcategory = require('../models/subcategory')(sequelize, Sequelize);
 const user = require('../models/user')(sequelize, Sequelize);
 
-
-
 product.sync();
 image.sync();
-
 
 //address-user
 address.hasMany(user, {
