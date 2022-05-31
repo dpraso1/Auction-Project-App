@@ -36,10 +36,10 @@ export function LandingPage() {
         <div className="products">
             <div className="tabs">
                 <div className="tab new-arrivals">    
-                    <h1 onClick={() => setActive(true)}>New Arrivals</h1>
+                    <h1  onClick={() => setActive(true)} style={isActive ? {borderBottom: "4px solid #8367D8"} : null}>New Arrivals</h1>
                 </div>
                 <div className="tab last-chance">
-                    <h1 onClick={() => setActive(false)}>Last Chance</h1>
+                    <h1 onClick={() => setActive(false)} style={!isActive ? {borderBottom: "4px solid #8367D8"} : null}>Last Chance</h1>
                 </div>
             </div>
 
