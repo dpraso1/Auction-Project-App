@@ -1,7 +1,6 @@
 import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap/'
 import Product from './Product';
-import './ProductsContainer.css';
 
 export const ProductsContainer = ({products}) => {
    

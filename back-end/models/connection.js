@@ -20,9 +20,6 @@ const product = require('../models/product')(sequelize, Sequelize);
 const subcategory = require('../models/subcategory')(sequelize, Sequelize);
 const user = require('../models/user')(sequelize, Sequelize);
 
-product.sync();
-image.sync();
-
 //address-user
 address.hasMany(user, {
     foreignKey: "address_id",
@@ -73,7 +70,6 @@ image.belongsTo(product, {
      sourceKey: "id"
  });
 
- 
 //product-bid
 product.hasMany(bid, {
     foreignKey: "product_id",
