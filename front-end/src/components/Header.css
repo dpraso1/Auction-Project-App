@@ -1,0 +1,31 @@
+.inactive {
+  background-color: #252525;
+  height: 40px;
+  padding: 10px 10px 10px 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.inactive .social-media-icon {
+  color: #778899;
+}
+
+.inactive .social-media-icon:hover {
+  color: #586674
+}
+
+.app-sign {
+  color: #8367D8;
+  padding: 50px 10px 10px 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.app-name {
+  font-family: "Lato-Light", sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.84px;
+  margin-left: 10px;
+  margin-top: -3px;
+  font-weight: 300;
+}

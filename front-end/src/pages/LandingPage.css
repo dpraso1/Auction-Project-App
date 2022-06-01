@@ -1,0 +1,33 @@
+.products .line {
+    background: #ECECEC;
+    height: 4px;
+    margin: -21px 50px;
+}
+
+.tabs {
+    font-family: "Lato", sans-serif;
+    color: #252525;
+    letter-spacing: 0.98px;
+    font-size: 28px;
+    padding: 50px 50px 10px 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.tabs .tab {
+    min-width: fit-content;
+    font-size: 28px;
+}
+
+.tabs .tab:hover {
+    cursor: pointer;
+    color: #8367D8;
+}
+
+.tabs .new-arrivals {
+    margin-right: 25px;
+}
+
+.active {
+    border-bottom: 4px solid #8367D8;
+}
