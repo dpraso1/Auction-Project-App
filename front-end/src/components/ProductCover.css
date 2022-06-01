@@ -1,9 +1,6 @@
 .product-cover {
-  font-family: "Lato", sans-serif;  
+  font-family: "Lato", sans-serif;
   background: #FAFAFA;
-  padding: 200px 200px 50px 500px;
-  display: flex;
-  flex-direction: row;
 }
 
 .product-cover .product-name {
@@ -16,7 +13,7 @@
   font-family: "Lato", sans-serif;
   color: #8367D8;
   letter-spacing: 0.84px;
-  
+
 }
 
 .product-cover .product-description {
@@ -31,100 +28,147 @@
 
 
 @media only screen and (min-width: 200px) {
-  .product-cover img {
-    max-width: 150px;
-    max-height: 150px;
+  .product-cover {
+    padding: 200px 700px 50px 80px;
+    display: flex;
+    flex-direction: column;
   }
+
+  .product-cover img {
+    width: 260px;
+    height: 260px;
+  }
+
   .product-cover .product-name {
     font-size: 30px;
-    width: 280px;
-    height: 40px;
+    width: 260px;
+    height: 37px;
   }
+
   .product-cover .product-price {
+    width: 260px;
     font-size: 14px;
   }
+
   .product-cover .product-description {
-    font-size: 6px;
-    line-height: 8px;  
+    font-size: 10px;
+    width: 280px;
+    line-height: 12px;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .product-cover {
+    padding: 200px 700px 50px 140px;
+    display: flex;
+    flex-direction: column;
+  }
+
   .product-cover img {
-      max-width: 200px;
-      max-height: 200px;
+    width: 260px;
+    height: 260px;
   }
+
   .product-cover .product-name {
-      font-size: 36px;
-      width: 290px;
-      height: 43px;
+    font-size: 30px;
+    width: 260px;
+    height: 37px;
   }
+
   .product-cover .product-price {
-      font-size: 16px;
+    width: 260px;
+    font-size: 14px;
   }
+
   .product-cover .product-description {
-      font-size: 8px;
-      line-height: 10px;  
+    font-size: 10px;
+    width: 280px;
+    line-height: 12px;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .product-cover {
+    padding: 200px 700px 50px 140px;
+    display: flex;
+    flex-direction: row;
+  }
+
   .product-cover img {
-      max-width: 250px;
-      max-height: 250px;
+    width: 250px;
+    height: 250px;
   }
+
   .product-cover .product-name {
-      font-size: 40px;
-      width: 297px;
-      height: 45px;
+    font-size: 40px;
+    width: 297px;
+    height: 48px;
   }
+
   .product-cover .product-price {
-      font-size: 18px;
+    font-size: 18px;
   }
+
   .product-cover .product-description {
-      font-size: 10px;
-      line-height: 14px;  
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .product-cover {
+    padding: 200px 700px 50px 200px;
+    display: flex;
+    flex-direction: row;
+  }
+
   .product-cover img {
-      max-width: 300px;
-      max-height: 300px;
+    width: 300px;
+    height: 300px;
   }
+
   .product-cover .product-name {
-      font-size: 42px;
-      width: 300px;
-      height: 47px;
+    font-size: 42px;
+    width: 300px;
+    height: 47px;
   }
+
   .product-cover .product-price {
-      font-size: 20px;
+    font-size: 20px;
   }
+
   .product-cover .product-description {
-      font-size: 12px;
-      line-height: 18px;  
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .product-cover {
+    padding: 200px 700px 50px 500px;
+  }
+
   .product-cover img {
-      max-width: 350px;
-      max-height: 350px;
+    width: 350px;
+    height: 350px;
   }
+
   .product-cover .product-name {
-      font-size: 46px;
-      width: 317px;
-      height: 55px;
+    font-size: 46px;
+    width: 317px;
+    height: 55px;
   }
+
   .product-cover .product-price {
-      font-size: 24px;
+    font-size: 24px;
   }
+
   .product-cover .product-description {
-      font-size: 16px;
-      line-height: 22px;  
+    font-size: 16px;
+    line-height: 22px;
   }
 }

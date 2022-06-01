@@ -4,7 +4,7 @@
     margin: -21px 50px;
 }
 
-.tabs { 
+.tabs {
     font-family: "Lato", sans-serif;
     color: #252525;
     letter-spacing: 0.98px;
@@ -26,4 +26,8 @@
 
 .tabs .new-arrivals {
     margin-right: 25px;
+}
+
+.active {
+    border-bottom: 4px solid #8367D8;
 }

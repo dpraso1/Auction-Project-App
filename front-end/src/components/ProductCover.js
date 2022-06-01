@@ -12,7 +12,7 @@ const ProductCover = () => {
                 const response = await api.get('/api/products/product-cover');
                 setProduct(response.data);
             } catch (err) {
-                if(err.response) {
+                if (err.response) {
                     console.log(err.response.data);
                     console.log(err.response.status);
                     console.log(err.response.headers);
@@ -26,27 +26,27 @@ const ProductCover = () => {
     }, []);
 
     return (
-    <div className="product-cover">
-        
-        <div className="details">
-        <div className="product-name">
-            <p>{product.product_name}</p>
-        </div>
+        <div className="product-cover">
 
-        <div className="product-price">
-            {product.product_price  && <p>Start from - ${product.product_price.toFixed(2)}</p>}
-        </div>
+            <div className="details">
+                <div className="product-name">
+                    <p>{product.product_name}</p>
+                </div>
 
-        <div className="product-description">
-            {product.product_description && <p>{product.product_description}</p>}
-        </div>
-        </div>
+                <div className="product-price">
+                    {product.product_price && <p>Start from - ${product.product_price.toFixed(2)}</p>}
+                </div>
 
-        
-        <div className="product-image">  
-            {product.images && <img src={product.images[0].image_link} alt="Random product"/> }
+                <div className="product-description">
+                    {product.product_description && <p>{product.product_description}</p>}
+                </div>
+            </div>
+
+
+            <div className="product-image">
+                {product.images && <img src={product.images[0].image_link} alt="Random product" />}
+            </div>
         </div>
-    </div>
     )
 }
 
