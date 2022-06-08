@@ -1,11 +1,14 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 import './Product.css';
 
 export const Product = ({ product }) => {
 
+    const history = useHistory();
+    
     return (
         <div className="product-card">
-            <div className="product-image">
+            <div className="product-image" onClick={() => { history.push(`/item-page/${product.id}`) }}>
                 <p>{product.images && <img src={product.images[0].image_link} alt="New arrivals product" />}</p>
             </div>
             <div className="product-name">

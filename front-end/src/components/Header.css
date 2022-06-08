@@ -1,7 +1,7 @@
 .inactive {
   background-color: #252525;
   height: 40px;
-  padding: 10px 10px 10px 30px;
+  padding: 10px 10px 10px 160px;
   display: flex;
   flex-direction: row;
 }
@@ -16,16 +16,108 @@
 
 .app-sign {
   color: #8367D8;
-  padding: 50px 10px 10px 50px;
+  padding: 50px 10px 10px 180px;
   display: flex;
   flex-direction: row;
 }
 
 .app-name {
   font-family: "Lato-Light", sans-serif;
+  color: #8367D8;
   font-size: 24px;
   letter-spacing: 0.84px;
   margin-left: 10px;
   margin-top: -3px;
   font-weight: 300;
+}
+
+.gavel-icon {
+  color: #C4BFD6;
+}
+
+.routers {
+  display: flex;
+  flex-direction: row;
+}
+
+.routers .link-decoration {
+  text-decoration: none;
+  font-size: 16px;
+  color: #252525;
+  letter-spacing: 0.56px;
+}
+
+.routers :hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #8367D8;
+}
+
+@media only screen and (min-width: 200px) {
+  .auction-home {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .routers {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 10px 30px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .auction-home {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .routers {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0px 10px 80px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .auction-home {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .routers {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0px 10px 300px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .auction-home {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .routers {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0px 10px 500px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .auction-home {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .routers {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0px 10px 850px;
+  }
 }

@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from "react-router-dom"; 
-import './ProductCover.css';
+import { Col } from 'react-bootstrap/';
+import './SingleProduct.css';
 import api from '../api/api.js';
 
-const ProductCover = () => {
+export const SingleProduct = ({ id }) => {
+    console.log(id);
 
-    const [product, setProduct] = useState({});
-    const history = useHistory();
+    const [product, setProduct] = useState([]);
 
     useEffect(() => {
-        const fetchProduct = async () => {
+        const fetchProduct = async (id) => {
             try {
-                const response = await api.get('/api/products/product-cover');
-                setProduct(response.data);
+                const product = await api.get(`/api/products/${id}`);
+                setProduct(product.data);
             } catch (err) {
                 if (err.response) {
                     console.log(err.response.data);
@@ -23,13 +23,20 @@ const ProductCover = () => {
                 }
             }
         }
-
-        fetchProduct();
+        fetchProduct(id);
     }, []);
 
     return (
-        <div className="product-cover">
 
+        <div className="single-product">
+            <div className="single-product-header">
+
+            </div>
+            <div className="product-image">
+                {product.images && <img src={product.images[0].image_link} alt="Single page product" />}
+                <Col className="cols-conrainer" lg={3} key={id}>
+                </Col>
+            </div>
             <div className="details">
                 <div className="product-name">
                     <p>{product.product_name}</p>
@@ -40,16 +47,14 @@ const ProductCover = () => {
                 </div>
 
                 <div className="product-description">
+                    <h3>Details</h3>
+                    <div className="line"></div>
                     {product.product_description && <p>{product.product_description}</p>}
                 </div>
             </div>
 
-
-            <div className="product-image" onClick={() => { history.push(`/item-page/${product.id}`) }}>
-                {product.images && <img src={product.images[0].image_link} alt="Random product" />}
-            </div>
         </div>
-    )
+    );
 }
 
-export default ProductCover;
+export default SingleProduct;

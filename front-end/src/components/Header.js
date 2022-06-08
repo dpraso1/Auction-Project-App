@@ -5,6 +5,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GoogleIcon from '@mui/icons-material/Google';
 import GavelIcon from '@mui/icons-material/Gavel';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -21,8 +22,15 @@ const Header = () => {
                 <div className="gavel-icon">
                     <GavelIcon fontSize="large" />
                 </div>
+                <div className="auction-home">
                 <div className="app-name">
                     <h1>AUCTION</h1>
+                </div>
+                <div className="routers">
+                    <div className="home">
+                        <Link className="link-decoration" to="/"><h3>HOME</h3></Link>
+                    </div>
+                </div>
                 </div>
             </div>
         </header>

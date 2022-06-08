@@ -19,6 +19,14 @@ const image = require('../models/image')(sequelize, Sequelize);
 const product = require('../models/product')(sequelize, Sequelize);
 const subcategory = require('../models/subcategory')(sequelize, Sequelize);
 const user = require('../models/user')(sequelize, Sequelize);
+/*product.sync();
+image.sync();
+address.sync();
+card_information.sync();
+bid.sync();
+category.sync();
+subcategory.sync();
+user.sync();*/
 
 //address-user
 address.hasMany(user, {
@@ -82,10 +90,12 @@ bid.belongsTo(product, {
 
 //user-bid
 user.hasMany(bid, {
+    as: "user",
     foreignKey: "user_id",
     sourceKey: "id"
  });
 bid.belongsTo(user, {
+    as: "user",
      foreignKey: "user_id",
      sourceKey: "id"
  });
