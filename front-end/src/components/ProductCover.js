@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom"; 
+import Button from './Button';
 import './ProductCover.css';
 import api from '../api/api.js';
 
@@ -41,6 +42,9 @@ const ProductCover = () => {
 
                 <div className="product-description">
                     {product.product_description && <p>{product.product_description}</p>}
+                </div>
+                <div className="button">
+                    <Button onClick={() => { history.push(`/item-page/${product.id}`) }}><p>BID NOW {'>'}</p></Button>
                 </div>
             </div>
 

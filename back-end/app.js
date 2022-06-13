@@ -13,6 +13,7 @@ app.get('/api/products/last-chance', controller.getLastChance);
 app.get('/api/products/product-cover', controller.getProductCover);
 app.get('/api/products/:id', controller.getProductById);
 app.get('/api/products/:id/bids', controller.getBid);
+app.post('/api/products/create-bid', controller.postBid);
 
 const PORT = process.env.PORT || 8080;
 

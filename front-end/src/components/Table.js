@@ -11,11 +11,9 @@ export const Table = ({ id }) => {
 
     useEffect(() => {
         const fetchBids = async (id) => {
-            console.log(id);
             try {
                 const bids = await api.get(`/api/products/${id}/bids`);
                 setBids(bids.data);
-                console.log(bids.data);
             } catch (err) {
                 if (err.response) {
                     console.log(err.response.data);

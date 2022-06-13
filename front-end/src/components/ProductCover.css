@@ -30,6 +30,15 @@
   cursor: pointer;
 }
 
+.product-cover .button p {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #252525;
+  letter-spacing: 0.63px;
+  padding: 7px 29px;
+}
+
 
 @media only screen and (min-width: 200px) {
   .product-cover {

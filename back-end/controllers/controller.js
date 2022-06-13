@@ -129,9 +129,8 @@ exports.getBid = (req, res) => {
 
 };
 
-/*exports.postBid = (req, res) => {
-    let user_id;
-    let product_id;
+exports.postBid = (req, res) => {
+   //uzmi iz parametara user product
     const bid = {
         date_time: req.body.date_time,
         amount: req.body.amount,
@@ -141,6 +140,7 @@ exports.getBid = (req, res) => {
     };
 
     bid.create(bid)
+    
         .then(data => {
             res.send(data);
         }).catch(err => {
@@ -150,4 +150,3 @@ exports.getBid = (req, res) => {
             });
         });
 };
-*/

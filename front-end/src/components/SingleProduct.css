@@ -32,6 +32,48 @@
     margin-bottom: 5%;
 }
 
+.single-product .image-gallery {
+    display: flex;
+    flex-direction: row;
+}
+
+.single-product .image-gallery img:hover {
+    cursor: pointer;
+}
+
+.single-product input {
+    width: 176px;
+    height: 54px;
+    background: #ECECEC;
+    border: 1px solid #D8D8D8;
+}
+
+.single-product .place-bid {
+    display: flex;
+    flex-direction: row;
+}
+
+.single-product .button {
+    margin-left: 20px;
+    width: 176px;
+}
+
+.single-product .button p {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #252525;
+    letter-spacing: 0.63px;
+
+}
+
+.single-product .info {
+    font-family: "Lato-Regular", sans-serif;
+    font-size: 16px;
+    color: #9B9B9B;
+    letter-spacing: 0.56px;
+    margin-top: 100px;
+}
 
 @media only screen and (min-width: 200px) {
     .single-product {
@@ -49,6 +91,20 @@
         margin-top: 27%;
         width: 260px;
         height: 260px;
+    }
+
+    .single-product .image-gallery {
+        background: #ECECEC;
+        width: 362px;
+        height: 100px;
+        padding: 30px 100px 10px 32px;
+        margin-left: 13%;
+    }
+
+    .single-product .cols img {
+        width: 80px;
+        height: 80px;
+        margin: -20px 30px 75px -22px;
     }
 
     .single-product .details {
@@ -71,12 +127,27 @@
         width: 360px;
         letter-spacing: 0.52px;
         line-height: 22px;
-        margin-top: 60%;
+        margin-top: 30%;
     }
 
     .single-product .line {
 
         width: 360px;
+    }
+
+    .single-product .place-bid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .single-product .button {
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    .single-product .button p {
+        font-size: 18px;
+        padding: 10px 5px;
     }
 }
 
@@ -99,6 +170,20 @@
         height: 260px;
     }
 
+    .single-product .image-gallery {
+        background: #ECECEC;
+        width: 362px;
+        height: 100px;
+        padding: 30px 100px 10px 32px;
+        margin-left: 13%;
+    }
+
+    .single-product .cols img {
+        width: 80px;
+        height: 80px;
+        margin: -20px 30px 75px -22px;
+    }
+
     .single-product .details {
         padding: 0px 0px 0px 45px;
     }
@@ -119,13 +204,29 @@
         width: 360px;
         letter-spacing: 0.52px;
         line-height: 22px;
-        margin-top: 60%;
+        margin-top: 30%;
     }
 
     .single-product .line {
 
         width: 360px;
     }
+
+    .single-product .place-bid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .single-product .button {
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    .single-product .button p {
+        font-size: 18px;
+        padding: 10px 10px;
+    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -147,6 +248,20 @@
         height: 260px;
     }
 
+    .single-product .image-gallery {
+        background: #ECECEC;
+        width: 362px;
+        height: 100px;
+        padding: 30px 100px 10px 0px;
+        margin-left: 10%;
+    }
+
+    .single-product .cols img {
+        width: 80px;
+        height: 80px;
+        margin: -20px 30px 75px 11px;
+    }
+
     .single-product .product-name {
         font-size: 36px;
         width: 260px;
@@ -163,12 +278,27 @@
         width: 400px;
         letter-spacing: 0.52px;
         line-height: 22px;
-        margin-top: 60%;
+        margin-top: 25%;
     }
 
     .single-product .line {
 
         width: 400px;
+    }
+
+    .single-product .place-bid {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .single-product .button {
+        margin-left: 20px;
+        margin-top: 0px;
+    }
+
+    .single-product .button p {
+        font-size: 18px;
+        padding: 7px 10px;
     }
 }
 
@@ -191,6 +321,34 @@
         height: 260px;
     }
 
+    .single-product .image-gallery {
+        background: #ECECEC;
+        width: 362px;
+        height: 90px;
+        padding: 30px 100px 10px 32px;
+        margin-left: 13%;
+    }
+
+    .single-product .cols img {
+        width: 65px;
+        height: 65px;
+        margin: -20px 50px 75px -22px;
+    }
+
+    .single-product .image-gallery {
+        background: #ECECEC;
+        width: 362px;
+        height: 100px;
+        padding: 30px 100px 10px 5px;
+        margin-left: 10%;
+    }
+
+    .single-product .cols img {
+        width: 80px;
+        height: 80px;
+        margin: -20px 50px 75px 7px;
+    }
+
     .single-product .product-name {
         font-size: 40px;
         width: 260px;
@@ -207,12 +365,27 @@
         width: 600px;
         letter-spacing: 0.52px;
         line-height: 22px;
-        margin-top: 40%;
+        margin-top: 10%;
     }
 
     .single-product .line {
 
         width: 600px;
+    }
+
+    .single-product .place-bid {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .single-product .button {
+        margin-left: 20px;
+        margin-top: 0px;
+    }
+
+    .single-product .button p {
+        font-size: 18px;
+        padding: 7px 10px;
     }
 }
 
@@ -231,8 +404,24 @@
 
     .single-product img {
         margin-top: 23%;
+        margin-left: 14%;
         width: 360px;
         height: 360px;
+
+    }
+
+    .single-product .image-gallery {
+        background: #ECECEC;
+        width: 470px;
+        height: 130px;
+        padding: 30px 100px 10px 25px;
+        margin-left: 8%;
+    }
+
+    .single-product .cols img {
+        width: 110px;
+        height: 110px;
+        margin: -20px 50px 75px -18px;
     }
 
     .single-product .product-name {
@@ -251,12 +440,26 @@
         width: 600px;
         letter-spacing: 0.52px;
         line-height: 22px;
-        margin-top: 60%;
+        margin-top: 37%;
 
     }
 
-
     .single-product .line {
         width: 600px;
+    }
+
+    .single-product .place-bid {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .single-product .button {
+        margin-left: 20px;
+        margin-top: 0px;
+    }
+
+    .single-product .button p {
+        font-size: 18px;
+        padding: 7px 10px;
     }
 }
