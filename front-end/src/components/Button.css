@@ -1,8 +1,9 @@
 .button {
-    outline: none;
+    outline:none;
     background: #FFFFFF;
     border: 3px solid #8367D8;
     box-shadow: 3px 3px 0 0 rgba(131, 103, 216, 0.31);
     width: 192px;
     height: 57px;
+    cursor: pointer;
 }

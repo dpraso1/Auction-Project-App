@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ProductCover from '../components/ProductCover';
 import ProductsContainer from '../components/ProductsContainer';
-import Button from '../components/Button';
 import './LandingPage.css';
 import api from '../api/api.js';
 

@@ -4,9 +4,7 @@ import './Button.css';
 export const Button = ({
     children,
     type,
-    onClick,
-    buttonStyle,
-    buttonSize
+    onClick
 }) => {
     return (
         <button className="btn" onClick={onClick} type={type}>

@@ -19,14 +19,15 @@ const image = require('../models/image')(sequelize, Sequelize);
 const product = require('../models/product')(sequelize, Sequelize);
 const subcategory = require('../models/subcategory')(sequelize, Sequelize);
 const user = require('../models/user')(sequelize, Sequelize);
-/*product.sync();
-image.sync();
 address.sync();
+user.sync();
 card_information.sync();
-bid.sync();
 category.sync();
+product.sync();
+image.sync();
+bid.sync();
 subcategory.sync();
-user.sync();*/
+
 
 //address-user
 address.hasMany(user, {
@@ -101,4 +102,4 @@ bid.belongsTo(user, {
  });
 
 
-module.exports = {sequelize, address, bid, card_information, category, subcategory, user, product, image};
+module.exports = {sequelize, address, user, card_information, category, product, image, bid, subcategory};

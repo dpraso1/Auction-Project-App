@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom"; 
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Button from './Button';
 import './ProductCover.css';
 import api from '../api/api.js';
@@ -44,7 +45,7 @@ const ProductCover = () => {
                     {product.product_description && <p>{product.product_description}</p>}
                 </div>
                 <div className="button">
-                    <Button onClick={() => { history.push(`/item-page/${product.id}`) }}><p>BID NOW {'>'}</p></Button>
+                    <Button onClick={() => { history.push(`/item-page/${product.id}`) }}><p>BID NOW <ArrowForwardIosIcon className="arrow" fontSize="small"/></p></Button>
                 </div>
             </div>
 

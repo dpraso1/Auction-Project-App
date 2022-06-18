@@ -1,5 +1,7 @@
 'use strict';
 
+var  moment = require('moment');
+const { randomUUID } = require('crypto');
 const { sequelize, product, image, user, bid } = require("../models/connection");
 
 exports.getNewArrivals = (req, res) => {
@@ -73,9 +75,10 @@ exports.getProductCover = (req, res) => {
     });
 };
 
+
+
 exports.getProductById = (req, res) => {
     const id = req.params.id;
-
     product.findByPk(id, {
         include: {
             model: image,
@@ -97,17 +100,14 @@ exports.getProductById = (req, res) => {
 };
 
 exports.getBid = (req, res) => {
-
     const id = req.params.id;
-
+    
     bid.findAll({
-
-        limit: 5,
         where: {
             product_id: id
         },
         order: [
-            ['date_time', 'DESC']
+            ['amount', 'DESC']
         ],
         attributes: [
             'id',
@@ -129,24 +129,59 @@ exports.getBid = (req, res) => {
 
 };
 
-exports.postBid = (req, res) => {
-   //uzmi iz parametara user product
-    const bid = {
-        date_time: req.body.date_time,
-        amount: req.body.amount,
-        zip_code: req.body.zip_code,
-        user_id: user.id,
-        product_id: product.id,
+
+exports.postBid = (async (req, res) => {
+
+    const randomUser = await user.findOne({
+        order: sequelize.random(),
+    });   
+
+    const id = randomUUID();
+    const productId = req.params.id;
+    const userId = randomUser.id;
+    const date = moment();
+    const amount = req.body.amount;
+    
+    const maxBid = await bid.findOne({
+        attributes: [[sequelize.fn('max', sequelize.col('amount')), 'highestBid']],
+    });
+
+    const highestBid = maxBid.dataValues.highestBid;
+    const Product = await product.findByPk(productId);
+
+    if (moment(Product.end_date).isBefore(date)) {
+        res.status(400).send("The auction for this product is over!");
+        return;
+    }
+    if (amount <= highestBid) {
+        res.status(400).send("New amount should be higher than the current highest bid");
+        return;
+    }
+    if (amount <= Product.product_price) {
+        res.status(400).send("Amount should be higher than the current amount");
+        return;
+    }
+    if (amount <= 0) {
+        res.status(400).send("Amount has to be greater than 0!");
+        return;
+    } 
+
+    const Bid = {
+        id: id,
+        date_time: date,
+        amount: amount,
+        product_id: productId,
+        user_id: userId
     };
 
-    bid.create(bid)
-    
-        .then(data => {
-            res.send(data);
-        }).catch(err => {
-            res.status(500).send({
-                message:
-                    err.message || "An error occured while adding the bid!"
-            });
+    bid.create(Bid)
+
+    .then(data => {
+        res.send(data);
+    }).catch(err => {
+        res.status(500).send({
+            message:
+                err.message || "An error occured while adding the bid!"
         });
-};
+    });
+});

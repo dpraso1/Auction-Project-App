@@ -36,7 +36,12 @@
   font-size: 18px;
   color: #252525;
   letter-spacing: 0.63px;
-  padding: 7px 29px;
+  padding: 7px 19px;
+}
+
+.product-cover .arrow {
+  margin-left: 10px;
+  margin-bottom: 5px;
 }
 
 

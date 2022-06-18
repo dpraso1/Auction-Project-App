@@ -16,10 +16,6 @@ module.exports = (sequelize, DataTypes) => {
             type: Sequelize.DOUBLE,
             allowNull: false,
         },
-        zip_code: {
-            type: Sequelize.STRING,
-            allowNull: false,
-        },
         user_id: {
             type: Sequelize.UUID,
             foreignKey: true,

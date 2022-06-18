@@ -1,5 +1,4 @@
 import React from 'react';
-import './ItemPage.css';
 import { useParams } from "react-router-dom";
 import SingleProduct from '../components/SingleProduct';
 import Table from '../components/Table';

@@ -35,6 +35,8 @@
 .single-product .image-gallery {
     display: flex;
     flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .single-product .image-gallery img:hover {
@@ -72,7 +74,11 @@
     font-size: 16px;
     color: #9B9B9B;
     letter-spacing: 0.56px;
-    margin-top: 100px;
+    margin-top: 40px;
+}
+
+.single-product .error {
+    color: red;
 }
 
 @media only screen and (min-width: 200px) {
@@ -127,7 +133,7 @@
         width: 360px;
         letter-spacing: 0.52px;
         line-height: 22px;
-        margin-top: 30%;
+        margin-top: 50px;
     }
 
     .single-product .line {
@@ -145,9 +151,14 @@
         margin-left: 0px;
     }
 
+    .single-product .arrow {
+        margin-left: 10px;
+        margin-bottom: 4px;
+    }
+
     .single-product .button p {
         font-size: 18px;
-        padding: 10px 5px;
+        padding: 8px 1px;
     }
 }
 
@@ -204,7 +215,7 @@
         width: 360px;
         letter-spacing: 0.52px;
         line-height: 22px;
-        margin-top: 30%;
+        margin-top: 50px;
     }
 
     .single-product .line {
@@ -222,9 +233,14 @@
         margin-left: 0px;
     }
 
+    .single-product .arrow {
+        margin-left: 10px;
+        margin-bottom: 4px;
+    }
+
     .single-product .button p {
         font-size: 18px;
-        padding: 10px 10px;
+        padding: 8px 1px;
     }
 
 }
@@ -278,7 +294,7 @@
         width: 400px;
         letter-spacing: 0.52px;
         line-height: 22px;
-        margin-top: 25%;
+        margin-top: 50px;
     }
 
     .single-product .line {
@@ -296,9 +312,14 @@
         margin-top: 0px;
     }
 
+    .single-product .arrow {
+        margin-left: 10px;
+        margin-bottom: 4px;
+    }
+
     .single-product .button p {
-        font-size: 18px;
-        padding: 7px 10px;
+        font-size: 16px;
+        padding: 7px 1px;
     }
 }
 
@@ -365,7 +386,7 @@
         width: 600px;
         letter-spacing: 0.52px;
         line-height: 22px;
-        margin-top: 10%;
+        margin-top: 50px;
     }
 
     .single-product .line {
@@ -383,9 +404,14 @@
         margin-top: 0px;
     }
 
+    .single-product .arrow {
+        margin-left: 10px;
+        margin-bottom: 4px;
+    }
+
     .single-product .button p {
         font-size: 18px;
-        padding: 7px 10px;
+        padding: 7px 1px;
     }
 }
 
@@ -404,7 +430,7 @@
 
     .single-product img {
         margin-top: 23%;
-        margin-left: 14%;
+        margin-left: 12%;
         width: 360px;
         height: 360px;
 
@@ -414,14 +440,14 @@
         background: #ECECEC;
         width: 470px;
         height: 130px;
-        padding: 30px 100px 10px 25px;
+        padding: 30px 90px 10px 25px;
         margin-left: 8%;
     }
 
     .single-product .cols img {
         width: 110px;
         height: 110px;
-        margin: -20px 50px 75px -18px;
+        margin: -20px 40px 0px -18px;
     }
 
     .single-product .product-name {
@@ -440,7 +466,7 @@
         width: 600px;
         letter-spacing: 0.52px;
         line-height: 22px;
-        margin-top: 37%;
+        margin-top: 50px;
 
     }
 
@@ -458,8 +484,13 @@
         margin-top: 0px;
     }
 
+    .single-product .arrow {
+        margin-left: 10px;
+        margin-bottom: 4px;
+    }
+
     .single-product .button p {
         font-size: 18px;
-        padding: 7px 10px;
+        padding: 7px 1px;
     }
 }

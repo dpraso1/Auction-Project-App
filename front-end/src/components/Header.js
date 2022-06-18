@@ -12,10 +12,10 @@ const Header = () => {
     return (
         <header className='header'>
             <Navbar className="inactive">
-                <Nav.Link className="social-media-icon" href="https://www.facebook.com/"><FacebookRoundedIcon fontSize="large" /></Nav.Link>
-                <Nav.Link className="social-media-icon" href="https://www.instagram.com/"><InstagramIcon fontSize="large" /></Nav.Link>
-                <Nav.Link className="social-media-icon" href="https://twitter.com/?lang=en"><TwitterIcon fontSize="large" /></Nav.Link>
-                <Nav.Link className="social-media-icon" href="https://www.google.com/"><GoogleIcon fontSize="large" /></Nav.Link>
+                <Nav.Link className="social-media-icon" href="https://www.facebook.com/"><FacebookRoundedIcon fontSize="medium" /></Nav.Link>
+                <Nav.Link className="social-media-icon" href="https://www.instagram.com/"><InstagramIcon fontSize="medium" /></Nav.Link>
+                <Nav.Link className="social-media-icon" href="https://twitter.com/?lang=en"><TwitterIcon fontSize="medium" /></Nav.Link>
+                <Nav.Link className="social-media-icon" href="https://www.google.com/"><GoogleIcon fontSize="medium" /></Nav.Link>
             </Navbar>
 
             <div className="app-sign">

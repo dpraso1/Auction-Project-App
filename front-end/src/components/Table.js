@@ -30,7 +30,6 @@ export const Table = ({ id }) => {
 
 
     return (
-
         bids.length > 0 &&
         <div className="table">
             <ReactBootStrap.Table bordered>
@@ -43,8 +42,8 @@ export const Table = ({ id }) => {
                 </thead>
                 <tbody className="biders-rows">
                     {
-                        bids.map((bid) => (
-                            <tr key={bid}>
+                        bids.map((bid, index) => (
+                            <tr key={index}>
                                 <td>{bid.user.first_name} {bid.user.last_name}</td>
                                 <td>{format(new Date(bid.date_time), "d MMMM Y")}</td>
                                 <td>${bid.amount.toFixed(2)}</td>
