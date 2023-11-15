@@ -1,0 +1,43 @@
+.first-row {
+    background: #F0F0F0;
+    border-bottom-style: hidden;
+}
+
+.bdb {
+    font-weight: normal;
+}
+
+@media only screen and (min-width: 200px) {
+    .table {
+        padding: 100px 40px 100px 60px;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .table {
+        padding: 100px 100px 100px 170px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .table {
+        padding: 100px 40px 100px 60px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .table {
+        padding: 100px 60px 100px 60px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .table {
+        padding: 100px 170px 100px 190px;
+    }
+}

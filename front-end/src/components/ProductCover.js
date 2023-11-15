@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom"; 
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Button from './Button';
 import './ProductCover.css';
 import api from '../api/api.js';
 
 const ProductCover = () => {
 
     const [product, setProduct] = useState({});
+    const history = useHistory();
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -40,10 +44,13 @@ const ProductCover = () => {
                 <div className="product-description">
                     {product.product_description && <p>{product.product_description}</p>}
                 </div>
+                <div className="button">
+                    <Button onClick={() => { history.push(`/item-page/${product.id}`) }}><p>BID NOW <ArrowForwardIosIcon className="arrow" fontSize="small"/></p></Button>
+                </div>
             </div>
 
 
-            <div className="product-image">
+            <div className="product-image" onClick={() => { history.push(`/item-page/${product.id}`) }}>
                 {product.images && <img src={product.images[0].image_link} alt="Random product" />}
             </div>
         </div>

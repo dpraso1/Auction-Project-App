@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'react-bootstrap/';
 import Product from './Product';
 
 export const ProductsContainer = ({ products }) => {
-
     return (
         <Container className="container">
             {products.length > 0 && (

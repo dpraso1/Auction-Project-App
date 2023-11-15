@@ -19,6 +19,15 @@ const image = require('../models/image')(sequelize, Sequelize);
 const product = require('../models/product')(sequelize, Sequelize);
 const subcategory = require('../models/subcategory')(sequelize, Sequelize);
 const user = require('../models/user')(sequelize, Sequelize);
+address.sync();
+user.sync();
+card_information.sync();
+category.sync();
+product.sync();
+image.sync();
+bid.sync();
+subcategory.sync();
+
 
 //address-user
 address.hasMany(user, {
@@ -82,13 +91,15 @@ bid.belongsTo(product, {
 
 //user-bid
 user.hasMany(bid, {
+    as: "user",
     foreignKey: "user_id",
     sourceKey: "id"
  });
 bid.belongsTo(user, {
+    as: "user",
      foreignKey: "user_id",
      sourceKey: "id"
  });
 
 
-module.exports = {sequelize, address, bid, card_information, category, subcategory, user, product, image};
+module.exports = {sequelize, address, user, card_information, category, product, image, bid, subcategory};

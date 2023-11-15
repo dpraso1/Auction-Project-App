@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     const Category = sequelize.define("category", {
         id: {
             type: Sequelize.UUID,
-            allowNull:false,
+            allowNull: false,
             primaryKey: true,
             unique: true,
         },
@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         freezeTableName: true,
         timestamps: false
-       });
+    });
        
     return Category;
 };
